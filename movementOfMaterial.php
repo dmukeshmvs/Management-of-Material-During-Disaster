@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["place_order"])) {
         mail($user_email, $subject, $emailMessage, $headers);
 
         // (Optional) Send copy to admin
-        $admin_email = $user_email;
+        $admin_email = "mukeshvenkatsaidoddi@gmail.com";
         mail($admin_email, "New Order Placed", "User Email: $user_email\n\n$emailMessage", $headers);
     } else {
         $receipt = "<p class='text-red-600 font-semibold'>Invalid email or no items ordered.</p>";
